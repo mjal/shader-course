@@ -9,6 +9,8 @@
 
 ** Commentaires
 
+Les commentaires sont juste là pour aider les humains. La machine les ignores.
+
 #+BEGIN_SRC glsl
   void mainImage(vec2 coord, vec4 color) {
     // Ceci est un commentaire.
@@ -18,7 +20,21 @@
 ** Afficher une quelquechose
 
 Il faut changer la variable ~color~. Soit avec =color = vec4(rouge,vert,bleu,alpha)= (on utilise jamais alpha, c'est la transparance)
-Ou avec ~color.r = valeur~ pour changer uniqument le rouge par exemple
+
+Ou avec ~color.r = valeur~ pour changer uniqument le rouge par exemple.
+
+Les valeurs sont entre 0 et 1.
+
+#+BEGIN_SRC glsl
+  void mainImage(vec2 coord, vec4 color) {
+    // On commence avec du noir
+    color = vec4(0.);
+    // On ajoute du rouge
+    color.r = 1.0;
+    // Et puis un peu de bleu
+    color.b = 0.3;
+  }
+#+END_SRC
 
 ** Coordonnées
 
