@@ -1,0 +1,13 @@
+Exercices: 
+
+- Copier une image
+- Inverser une image (indice utiliser ~1 - x~ au lieu de ~x~)
+- Ne garder que le rouge de l'image
+- Changer le rouge en bleu et le bleu en rouge
+- Transformer l'image en noir et blanc
+- Faire le négatif de l'image (indice: utiliser ~1 - r~ au lieu de ~r~, etc)
+
+Faire une transition entre deux images:
+- Simple ~r = t * r1 + (1 - t) * r2;~
+- De gauche à droite ~if (x < t) { r = r1; } else { r = r2; }~
+(On peut utiliser ~vec4 c~ au lieu de ~float r~)
