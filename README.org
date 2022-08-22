@@ -17,8 +17,8 @@
 
 ** Afficher une quelquechose
 
-Il faut changer la variable `color`. Soit avec src_glsl{color = vec4(rouge,vert,bleu,alpha)} (on utilise jamais alpha, c'est la transparance)
-Ou avec src_glsl{color.r = valeur} pour changer uniqument le rouge par exemple
+Il faut changer la variable ~color~. Soit avec src_glsl[:exports code]{color = vec4(rouge,vert,bleu,alpha)} (on utilise jamais alpha, c'est la transparance)
+Ou avec ~color.r = valeur~ pour changer uniqument le rouge par exemple
 
 ** Coordonnées
 
