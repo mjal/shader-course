@@ -1,5 +1,3 @@
-* Base
-
 ** Programme minimal
 
 #+BEGIN_SRC glsl
@@ -9,13 +7,39 @@
 
 ** Commentaires
 
-Les commentaires sont juste là pour aider les humains. La machine les ignores.
+Les commentaires sont juste là pour aider les humains. La machine les ignore.
 
 #+BEGIN_SRC glsl
   void mainImage(vec2 coord, vec4 color) {
     // Ceci est un commentaire.
   }
 #+END_SRC
+
+** Nombres
+
+On utilise la plupart du temps des nombres à virgule (~float~). Ces nombres doivent obligatoirement avoir une partie décimale.
+
+#+BEGIN_SRC glsl
+  float valeur = 1; // Erreur
+  float valeur = 0; // Erreur
+
+
+  float valeur = 0.0; // Ok
+  float valeur = 0.; // C'est pareil
+  float valeur = 0.25; // Ok
+#+END_SRC
+
+Sinon on aura une erreur
+
+** Instructions
+
+Une instruction finit toujours par un ;.
+
+#+BEGIN_SRC glsl
+  float valeur = 0.0 // Erreur
+  float valeur = 0.0; // Ok
+#+END_SRC
+
 
 ** Afficher une quelquechose
 
