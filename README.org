@@ -17,7 +17,9 @@ Les commentaires sont juste là pour aider les humains. La machine les ignore.
 
 ** Nombres
 
-On utilise la plupart du temps des nombres à virgule (~float~). Ces nombres doivent obligatoirement avoir une partie décimale.
+On utilise la plupart du temps des nombres à virgule (~float~).
+
+Ces nombres doivent obligatoirement avoir une partie décimale.
 
 #+BEGIN_SRC glsl
   float valeur = 1; // Erreur
@@ -70,7 +72,9 @@ Les valeurs sont entre 0 et 1.
 
 *** Entre 0 et 1 pour x et y
 
+#+BEGIN_SRC glsl
     vec2 uv = coord / iResolution.xy; // <0,1>
+#+END_SRC
   
     On utilise uv.x et uv.y
 
@@ -78,12 +82,8 @@ Les valeurs sont entre 0 et 1.
 
     Avantage: Le centre est le point (0,0)
 
+#+BEGIN_SRC glsl
     vec2 uv = 2 * (coord / iResolution.xy - 0.5); // <-1,1>
+#+END_SRC
 
     On utilise uv.x et uv.y
-
-* Formes
-
-** Rectanges
-
-** Ovales
