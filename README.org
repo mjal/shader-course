@@ -1,0 +1,50 @@
+* Base
+
+** Programme minimal
+
+#+BEGIN_SRC glsl
+  void mainImage(vec2 coord, vec4 color) {
+  }
+#+END_SRC
+
+** Commentaires
+
+  void mainImage(vec2 coord, vec4 color) {
+    // Ceci est un commentaire.
+  }
+
+** Afficher une quelquechose
+
+Il faut changer la variable `color`. Soit avec `color = vec4(rouge,vert,bleu,alpha)` (on utilise jamais alpha, c'est la transparance)
+Ou avec `color.r = valeur` pour changer uniqument le rouge par exemple
+
+void mainImage(vec2 coord, vec4 color) {
+}
+
+** Coordonnées
+
+   On peut soit utiliser differents systèmes de coordonnées selon ce que l'on veut.
+
+*** Entre 0 et 800 pour x, et entre 0 et 450 pour y
+
+    On utilise directement coord, avec coord.x et coord.y
+
+*** Entre 0 et 1 pour x et y
+
+    vec2 uv = coord / iResolution.xy; // <0,1>
+  
+    On utilise uv.x et uv.y
+
+*** Entre -1 et 1 pour x et y
+
+    Avantage: Le centre est le point (0,0)
+
+    vec2 uv = 2 * (coord / iResolution.xy - 0.5); // <-1,1>
+
+    On utilise uv.x et uv.y
+
+* Formes
+
+** Rectanges
+
+** Ovales
